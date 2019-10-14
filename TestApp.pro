@@ -13,9 +13,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+    MainController.cpp \
+    main.cpp
 
-RESOURCES += qml.qrc
+RESOURCES +=
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -27,3 +28,25 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    forms/ChangedDashboard.qml \
+    forms/CustomDashboard.qml \
+    forms/Dashboard.qml \
+    forms/DashboardForm.ui.qml \
+    forms/main.qml \
+    forms/style/DapWMS_Button.qml \
+    forms/style/DapWMS_Message.qml
+
+CONFIG(release, debug|release): DESTDIR = $$OUT_PWD/release
+CONFIG(debug, debug|release): DESTDIR = $$OUT_PWD/debug
+
+copy_to_build.path = $$DESTDIR/forms
+copy_to_build.files = forms/*
+
+INSTALLS += \
+    copy_to_build
+
+HEADERS += \
+    AppModules.h \
+    MainController.h
