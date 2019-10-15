@@ -32,6 +32,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     forms/ChangedDashboard.qml \
     forms/CustomDashboard.qml \
+    forms/CustomDashboard.qml \
     forms/Dashboard.qml \
     forms/DashboardForm.ui.qml \
     forms/main.qml \
