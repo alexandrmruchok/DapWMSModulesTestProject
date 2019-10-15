@@ -35,7 +35,7 @@ Loader
             "dynamicSnippet1"
         );
         item.buttonOk.anchors.right = newObject.left
-        item.buttonOk.action = actMessage
+        item.buttonOk.action_ = actMessage
         item.caption.text = "Changed Dashboard"
         item.caption.color = "Red"
     }

@@ -14,6 +14,6 @@ DashboardForm {
         text: "Close"
     }
 
-    buttonOk.action: close
+    buttonOk.action_: close
 }
 
