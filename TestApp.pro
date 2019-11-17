@@ -30,11 +30,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    forms/ChangedDashboard.qml \
     forms/CustomDashboard.qml \
     forms/CustomDashboard.qml \
     forms/Dashboard.qml \
     forms/DashboardForm.ui.qml \
+    forms/form/Dashboard.qml \
+    forms/form/DashboardForm.ui.qml \
     forms/main.qml \
     forms/style/DapWMS_Button.qml \
     forms/style/DapWMS_Message.qml

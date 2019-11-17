@@ -14,8 +14,8 @@ ApplicationWindow {
     ComboBox {
         id: comboBox
         width: 200
-        model: [ "Dashboard", "CustomDashboard", "ChangedDashboard" ]
-        onActivated: dashboardLoader.source =comboBox.currentText + ".qml"
+        model: [ "Dashboard", "CustomDashboard" ]
+        onActivated: dashboardLoader.source = comboBox.currentText + ".qml"
     }
     Rectangle {
         anchors.left: parent.left
